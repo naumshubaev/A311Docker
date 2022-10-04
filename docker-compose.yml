@@ -5,13 +5,9 @@ services:
    ports:
      - '5432:5432'
    volumes:
-     -  ./data:/var/lib/postgres
+     - ./data:/var/lib/postgres/data
 
    environment:
-     - POSTGRES_DB=app
-     - POSTGRES_USER=postgres
-     - POSTGRES_PASSWORD=example
-# adminer:
-#     image: adminer
-#     ports:
-#       - '8080:8080'
+     POSTGRES_DB: app
+     POSTGRES_USER: postgres
+     POSTGRES_PASSWORD: example
